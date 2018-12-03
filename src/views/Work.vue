@@ -1,26 +1,34 @@
 <template>
     <div>
-        <transition name="player-anim">
-            <div class="video-container" v-show="showPlayer">   
-                <iframe
-                id="video" 
-                v-bind:src="src" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen >
-                </iframe> 
-                <div class="close" @click="closePlayer">
-                    <div class="Bar1"></div>
-                    <div class="Bar2"></div>
-                </div>
-            </div>
+        <transition name="player-anim">            
+                <div class="video-container" v-show="showPlayer">   
+                    <iframe
+                    id="video" 
+                    v-bind:src="src" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen >
+                    </iframe> 
+                    <div class="close" @click="closePlayer">
+                        <div class="Bar1"></div>
+                        <div class="Bar2"></div>
+                    </div>
+                </div>                                                 
         </transition>
         <div style="height:100px"></div>
         <div class="container text-center">
-            <h1 class="animatedSlow fadeInDown">WORK</h1>
-            <div style="height:40px"></div>
+            <!-- <h1>WORK</h1> -->
         </div>
-        <div class="container text-center animatedVerySlow fadeIn">
+        <div class="container text-center">
+
+            <div class="row  justify-content-center">
+                <div class="col-md-7">
+                    <div class="video">
+                        <img @click="openPlayer('https://player.vimeo.com/video/304229569?autoplay=1&color=1e222b&byline=1&portrait=0')" class="imgPlay" src="../assets/work/demo.png">
+                        <h2 id="demoText">DEMO REEL</h2>
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-md-4">
@@ -45,8 +53,10 @@
 
             <div class="row">
                 <div class="col-md-4">
+                    
                     <div class="video">                        
                         <img @click="openPlayer('https://www.youtube.com/embed/0cVgUhSt6Zc?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/LOS.jpeg">
+                        
                     </div>
                     <h3>CLIENT // ABANDON VISUALS<br>ROLE // MUSIC, SOUND DESIGN AND MIX</h3>
                 </div>
@@ -162,12 +172,20 @@ h3 {
   line-height: 14px;
 }
 
+#demoText {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  margin-left: -90px;
+}
+
 iframe {
   width: 100%;
   height: 100%;
 }
 
 .video img {
+  transition: 200ms;
   opacity: 0.8;
   cursor: pointer;
   width: 100%;
@@ -182,7 +200,7 @@ iframe {
 .video-container {
   background-color: #000000;
   border-style: none;
-  z-index: 10;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -194,13 +212,12 @@ iframe {
 .close {
   z-index: 101;
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 30px;
+  left: 60px;
 }
 
 .Bar1,
 .Bar2 {
-  z-index: 100;
   width: 30px;
   height: 3px;
   border-radius: 60px;

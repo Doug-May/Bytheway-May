@@ -59,7 +59,7 @@ export default {
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  transition: 300ms;
+  transition: 200ms;
   position: fixed;
   top: 0px;
   right: 0px;
@@ -98,7 +98,7 @@ export default {
 .links {
   position: absolute;
   top: 50%;
-  margin-top: -200px;
+  margin-top: -160px;
   width: 100%;
 }
 

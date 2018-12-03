@@ -1,16 +1,15 @@
 <template>
 <div>
   <!-- video header with overlay and text here -->
-  <header id="v-header" class="v-header">
+  <header class="v-header">
     <div v-if="showVideo" id="video" class="fullscreen-video-wrap">
-      <video src="../assets/BMPorsche.mp4" autoplay="true" loop="true" muted></video>
+      <video src="../assets/BMPorsche.mp4" autoplay="true" loop="true" muted></video>      
     </div>
-    <div id="header-overlay" class="header-overlay"></div>
+    <div id="header-overlay" class="header-overlay"><div id="arrowDown"></div></div>
     <div class="header-content container text-center">
       <img id="mainLogo" src="../assets/logo.png">
-      <h1>MUSIC + SOUND</h1>
-    </div>
-    <div id="arrowDown"></div>
+      <h1 id="title">MUSIC + SOUND</h1>
+    </div>    
   </header>
 
   <!-- content that goes after the video header -->
@@ -41,10 +40,8 @@
   </section>
 
   <div class="img1">
-    <div class="imgTextWrap">
-      <router-link to="/work">
-        <h1 class="imgText">WORK</h1>
-      </router-link>        
+    <div class="imgTextWrap">  
+        <h1 class="imgText" @click="menuRoute('/work')">WORK</h1>        
     </div>
   </div>
 
@@ -68,9 +65,7 @@
 
   <div class="img2">
     <div class="imgTextWrap">  
-      <router-link to="/tools">
-        <h1 class="imgText">TOOLS</h1>
-      </router-link>        
+        <h1 class="imgText" @click="menuRoute('/tools')">TOOLS</h1>       
     </div>
   </div>
   <contact />
@@ -91,6 +86,11 @@ export default {
     return {
       showVideo: false
     };
+  },
+  methods: {
+    menuRoute(view) {
+      this.$router.push(view);
+    }
   },
   created: function() {
     // add video if user is on desktop
@@ -163,21 +163,6 @@ body {
   animation-timing-function: ease-in-out;
 }
 
-#arrowDown {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  border-style: solid;
-  color: #d0d0d0;
-  border-width: 0 2px 2px 0;
-  border-radius: 10%;
-  transform: rotate(45deg);
-  display: inline-block;
-  padding: 3px;
-  z-index: 3;
-  animation: flash 2s ease-in-out infinite;
-}
-
 .img1 {
   background-image: url("../assets/1new.jpg");
   min-height: 300px;
@@ -204,6 +189,12 @@ body {
   .img1,
   .img2 {
     background-attachment: scroll;
+  }
+  #title {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 20px;
   }
 }
 
@@ -265,6 +256,38 @@ body {
   border-radius: 5px;
   width: 100%;
   opacity: 0.9;
+}
+
+#title {
+  animation: fadeDown 2000ms 1 forwards;
+  animation-delay: 200ms;
+  opacity: 0;
+}
+
+#arrowDown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  border-style: solid;
+  color: #d0d0d0;
+  border-width: 0px 2px 2px 0;
+  border-radius: 10%;
+  transform: rotate(45deg);
+  display: inline-block;
+  padding: 3px;
+  z-index: 3;
+  animation: flash 2s ease-in-out infinite;
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translate(0px, -50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
 
 @keyframes flash {

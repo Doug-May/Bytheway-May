@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
+<div>
+  <div id="app" class="fadeIn">
     <menu-overlay/>
     <transition name="router-anim" mode="out-in">
       <router-view/>      
     </transition>
-      <Arrow/>
-  </div>
+    <Arrow/>      
+  </div>  
+</div>
+  
 </template>
 
 <script>
 import MenuOverlay from "@/components/MenuOverlay.vue";
-import VideoOverlay from "@/components/VideoOverlay.vue";
 import Arrow from "@/components/Arrow.vue";
 
 export default {
   name: "App",
   components: {
     MenuOverlay,
-    VideoOverlay,
     Arrow
   }
 };
@@ -65,33 +66,28 @@ h1 {
   font-size: 35px;
   margin: 30px;
   letter-spacing: 5px;
+  opacity: 0.7;
 }
 
 h2 {
   font-size: 30px;
+  opacity: 0.7;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 2px;
+  opacity: 0.7;
 }
 
 h4 {
   font-size: 13px;
+  opacity: 0.7;
 }
 
 h5 {
   font-size: 9px;
-  letter-spacing: 3px;
-}
-
-@media (max-width: 568px) {
-  h1 {
-    font-size: 25px;
-  }
-  h3 {
-    font-size: 18px;
-  }
+  letter-spacing: 2.5px;
 }
 
 .router-anim-enter-active {
@@ -102,6 +98,11 @@ h5 {
 .router-anim-leave-active {
   animation: going 700ms;
   animation-delay: 150ms;
+}
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 3000ms forwards 1;
+  animation-delay: 500ms;
 }
 @keyframes going {
   from {
@@ -119,6 +120,16 @@ h5 {
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    /* transform: translate(0px, 30px); */
+    opacity: 0;
+  }
+  to {
+    /* transform: translate(0px, 0px); */
     opacity: 1;
   }
 }

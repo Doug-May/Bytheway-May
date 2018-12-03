@@ -14,13 +14,15 @@
                     <ul>
                         <li>Barefoot Masterstack 12 (Pair) </li>
                         <li>Barefoot MM27 Gen 1 (Pair)</li>
+                        <li>Barefoot MM45 (Pair)</li>
+                        <li>Barefoot MM26</li>
+                        <li>Barefoot Footprint 01 (Pair)</li>
                         <li>Focal SM9 (Pair)</li>
-                        <li>JBL 6328P (5)</li>
-                        <li>JBL LSR4328P (Pair)</li>
+                        <li>JBL 6328P (5)</li>                
                         <li>Aventone Active Mixcubes (Pair)</li>
-                        <li>JL Fathom F12 Subwoofer</li>
-                        <li>JBL LSR4312SP Subwoofer</li>
+                        <li>JL Fathom F12 Subwoofer</li>                 
                         <li>Yamaha NS-10M (Pair)</li>
+                        <li>Presonus Sceptre S8 (Pair)</li>
                         <li>Hearback Monitoring System (5 Mixers)</li>
                         <li>Grace M902 Monitor Controller</li>
                         <li>Dangerous 2-Bus LT</li>
@@ -99,10 +101,10 @@
                     <h3>FIELD RECORDING</h3>
                     <div class="line-small"></div>
                     <ul>
-                        <li>Zoom F8</li>
+                        <li>Zoom F8 (2)</li>
                         <li>Zoom H6 (2)</li>
                         <li>Rode NTG 3 (2)</li>
-                        <li>Sennheiser G3 Wireless Lav kit (4)</li>
+                        <li>Sennheiser G3 Wireless Lav kit (6)</li>
                         <li>Sennheiser MKH 416</li>
                         <li>Schoeps 441</li>
                         <li>Schoeps 541</li>
@@ -346,8 +348,8 @@ h2,
 h3 {
   color: #ad9d81;
   opacity: 0.7;
-  margin-bottom: 0px;
-  margin-top: 50px;
+  margin-bottom: -15px;
+  margin-top: 30px;
 }
 
 .line {
