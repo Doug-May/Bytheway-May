@@ -36,20 +36,26 @@ const firebase = require("firebase");
 const moment = require("moment");
 import swal from "sweetalert2";
 // Initialize Firebase
+// Initialize Firebase
 var config = {
-  apiKey: "AIzaSyDtTTam9D_JlvsCsdCvxjShhCrRCW9B0jo",
-  authDomain: "bm-contact-form.firebaseapp.com",
-  databaseURL: "https://bm-contact-form.firebaseio.com",
-  projectId: "bm-contact-form",
-  storageBucket: "",
-  messagingSenderId: "395427605393"
+  apiKey: "AIzaSyCHBYcG9zlIMR4rusCsGGVzG1QjUnEgBTQ",
+  authDomain: "bytheway-may.firebaseapp.com",
+  databaseURL: "https://bytheway-may.firebaseio.com",
+  projectId: "bytheway-may",
+  storageBucket: "bytheway-may.appspot.com",
+  messagingSenderId: "444625286662"
 };
 firebase.initializeApp(config);
 // reference messages collection
-const messagesRef = firebase.database().ref("messages");
+const firestore = firebase.firestore();
+const settings = {
+  timestampsInSnapshots: true
+};
+firestore.settings(settings);
+const messagesRef = firebase.firestore().collection("messages");
 export default {
   name: "Contact",
-  data: function() {
+  data: function () {
     return {
       name: "",
       email: "",
@@ -84,22 +90,34 @@ export default {
             customClass: "msgSwal"
           });
         } else {
-          swal({
-            toast: true,
-            position: "bottom",
-            showConfirmButton: false,
-            timer: 3000,
-            type: "success",
-            title: "MESSAGE SENT!",
-            customClass: "msgSwal"
-          });
-          let newMessageRef = messagesRef.push();
-          newMessageRef.set({
-            name: this.name,
-            email: this.email,
-            message: this.message,
-            time: time
-          });
+          messagesRef.doc().set({
+              name: this.name,
+              email: this.email,
+              message: this.message,
+              time: time
+            })
+            .then(() => {
+              swal({
+                toast: true,
+                position: "bottom",
+                showConfirmButton: false,
+                timer: 3000,
+                type: "success",
+                title: "MESSAGE SENT!",
+                customClass: "msgSwal"
+              });
+            })
+            .catch((err) => {
+              swal({
+                toast: true,
+                position: "bottom",
+                showConfirmButton: false,
+                timer: 3000,
+                type: "error",
+                title: "AN ERROR OCCURED",
+                customClass: "msgSwal"
+              });
+            });
           this.name = "";
           this.email = "";
           this.message = "";

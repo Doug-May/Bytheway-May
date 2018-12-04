@@ -279,6 +279,7 @@ body {
   animation: flash 2s ease-in-out infinite;
 }
 
+
 @keyframes fadeDown {
   0% {
     transform: translate(0px, -50px);

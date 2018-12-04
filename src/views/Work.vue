@@ -22,14 +22,14 @@
         <div class="container text-center">
 
             <div class="row  justify-content-center">
-                <div class="col-md-7">
+                <div class="col-md-9">
                     <div class="video">
                         <img @click="openPlayer('https://player.vimeo.com/video/304229569?autoplay=1&color=1e222b&byline=1&portrait=0')" class="imgPlay" src="../assets/work/demo.png">
                         <h2 id="demoText">DEMO REEL</h2>
                     </div>
                 </div>
             </div>
-
+            <div style="height:50px"></div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="video">

@@ -16,7 +16,6 @@ export default {
   height: 80px;
 }
 #footer h5 {
-  position: absolute;
-  bottom: 20px;
+  float: left;
 }
 </style>
