@@ -17,7 +17,6 @@
                         <li>Barefoot MM45 (Pair)</li>
                         <li>Barefoot MM26</li>
                         <li>Barefoot Footprint 01 (Pair)</li>
-                        <li>Focal SM9 (Pair)</li>
                         <li>JBL 6328P (5)</li>                
                         <li>Aventone Active Mixcubes (Pair)</li>
                         <li>JL Fathom F12 Subwoofer</li>                 

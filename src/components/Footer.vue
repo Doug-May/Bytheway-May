@@ -1,12 +1,19 @@
 <template>
   <div id="footer" class="container">
-    <h5>BYTHEWAY-MAY LLC &nbsp;&nbsp; | &nbsp;&nbsp; COPYRIGHT 2018</h5>
+    <h5>BYTHEWAY-MAY LLC &nbsp;&nbsp; | &nbsp;&nbsp; COPYRIGHT {{date}}</h5>
   </div>
 </template>
 
 <script>
+let d = new Date();
+let n = d.getFullYear();
 export default {
-  name: "Footer"
+  name: "Footer",
+  data: function() {
+    return {
+      date: n
+    };
+  }
 };
 </script>
 
