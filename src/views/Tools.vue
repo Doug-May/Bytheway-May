@@ -13,8 +13,9 @@
                     <div class="line-small"></div>
                     <ul>
                         <li>Barefoot Masterstack 12 (Pair) </li>
+                        <li>Barefoot MM12 (Pair) </li>
                         <li>Barefoot MM27 Gen 1 (Pair)</li>
-                        <li>Barefoot MM45 (Pair)</li>
+                        <li>Barefoot MM45 (2 Pairs)</li>
                         <li>Barefoot MM26</li>
                         <li>Barefoot Footprint 01 (Pair)</li>
                         <li>JBL 6328P (5)</li>                
@@ -52,6 +53,8 @@
                         <li>ST59</li>
                         <li>ST79</li>
                         <li>MXL 990</li>
+                        <li>VMS ML-2 (2)</li>
+                        <li>VMS ML-1 (3)</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -59,6 +62,7 @@
                     <div class="line-small"></div>
                     <ul>
                         <li>Dizengoff D4</li>
+                        <li>Maag PREQ4 (2)</li>
                         <li>Dizengoff DA2</li>
                         <li>Gauge MP1073</li>
                         <li>Presonus 900TP</li>
@@ -76,6 +80,7 @@
                     <div class="line-small"></div>
                     <ul>
                         <li>Kush Audio Electra EQ (2)</li>
+                        <li>Kush Tweaker (3)</li>
                         <li>Dizengoff D864 Compressor</li>
                         <li>Kush Tweaker Compressor</li>
                         <li>SA4000 Compressor</li>
@@ -100,6 +105,7 @@
                     <h3>FIELD RECORDING</h3>
                     <div class="line-small"></div>
                     <ul>
+                        <li>Sound Devices 668</li>
                         <li>Zoom F8 (2)</li>
                         <li>Zoom H6 (2)</li>
                         <li>Rode NTG 3 (2)</li>
@@ -139,7 +145,6 @@
                         <li>Korg MS-20</li>
                         <li>Korg MicroKorg</li>
                         <li>Korg Volca Beats</li>
-                        <li>Moog Sub 37</li>
                         <li>Moog The Source</li>
                         <li>Polivoks Synthesizer</li>
                         <li>Vintage Roland Juno-6</li>
@@ -198,7 +203,7 @@
                         <li>Mutable Instruments Rings</li>
                         <li>Mutable Instruments Warps</li>
                         <li>Mutable Instruments Ripples</li>
-                        <li>Mutable Instruments Clouds (2)</li>
+                        <li>Mutable Instruments Clouds</li>
                         <li>Mutable Instruments Blinds </li>
                         <li>Mutable Instruments Veils (5)</li>
                         <li>Mutable Instruments Tides (2)</li>
@@ -226,7 +231,7 @@
                         <li>Doepher A-143</li>
                         <li>Music Thing Modular Turing Machine MKII</li>
                         <li>Audio Damage ADM-06</li>
-                        <li>Make Noise Maths</li>
+                        <li>Make Noise Maths (2)</li>
                         <li>Make Noise Morphagene</li>
                         <li>Make Noise Phonogene</li>
                         <li>4ms Quad Pingable LFO</li>
@@ -243,7 +248,6 @@
                         <li>Tip Top Audio Hats 808</li>
                         <li>Tip Top Audio BD 909</li>
                         <li>Tip Top Audio Circadian Rhythms </li>
-                        <li>Qu-Bit Chord</li>
                         <li>Qu-Bit Wave</li>
                         <li>Pittsburgh Modular KB-1</li>
                         <li>Erica Synths Pico Attenuator</li>
@@ -255,7 +259,6 @@
                         <li>Erica Synths Pico Trigg </li>
                         <li>Erica Synths Pico Seq</li>
                         <li>Erica Synths Polivoks VCF (2)</li>
-                        <li>Erica Synths Full Polivoks Synth Kit</li>
                     </ul>
                 </div>
 
@@ -271,6 +274,7 @@
                     <div class="line-small"></div>
                     <ul>
                         <li>iZotope Music Production Bundle</li>
+                        <li>iZotope RX7 Advanced</li>
                         <li>iZotope RX6 Advanced</li>
                         <li>Black Box Analog Design HG-2</li>
                         <li>Brainworx Saturator V2</li>

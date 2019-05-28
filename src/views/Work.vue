@@ -1,7 +1,8 @@
 <template>
     <div>
         <transition name="player-anim">            
-                <div class="video-container" v-show="showPlayer">   
+                <div class="video-container" v-show="showPlayer">
+                  <div id="iframeWrap">
                     <iframe
                     id="video" 
                     v-bind:src="src" 
@@ -9,10 +10,11 @@
                     allow="autoplay; encrypted-media" 
                     allowfullscreen >
                     </iframe> 
-                    <div class="close" @click="closePlayer">
-                        <div class="Bar1"></div>
-                        <div class="Bar2"></div>
-                    </div>
+                  </div>   
+                  <div class="close" @click="closePlayer">
+                      <div class="Bar1"></div>
+                      <div class="Bar2"></div>
+                  </div>
                 </div>                                                 
         </transition>
         <div style="height:100px"></div>
@@ -22,7 +24,7 @@
         <div class="container text-center">
 
             <div class="row  justify-content-center">
-                <div class="col-md-9">
+                <div class="col-md-7">
                     <div class="video">
                         <img @click="openPlayer('https://player.vimeo.com/video/304229569?autoplay=1&color=1e222b&byline=1&portrait=0')" class="imgPlay" src="../assets/work/demo.png">
                         <h2 id="demoText">DEMO REEL</h2>
@@ -31,6 +33,12 @@
             </div>
             <div style="height:50px"></div>
             <div class="row">
+              <div class="col-md-4">
+                    <div class="video">
+                        <img @click="openPlayer('https://player.vimeo.com/video/338497562?autoplay=1&color=1e222b&byline=1&portrait=0')" class="imgPlay" src="../assets/work/Convergence.png">
+                    </div>
+                    <h3>CLIENT // MAYER ELLIOT<br>ROLE // MUSIC, SOUND DESIGN AND MIX</h3>
+                </div>
                 <div class="col-md-4">
                     <div class="video">
                         <img @click="openPlayer('https://player.vimeo.com/video/285035791?autoplay=1&color=1e222b&byline=1&portrait=0')" class="imgPlay" src="../assets/work/porsche.jpeg">
@@ -43,12 +51,7 @@
                     </div>
                     <h3>CLIENT // ABANDON VISUALS<br>ROLE // SOUND DESIGN AND MIX</h3>
                 </div>
-                <div class="col-md-4">
-                    <div class="video">                        
-                        <img @click="openPlayer('https://player.vimeo.com/video/278197096?autoplay=1&color=1e222b&byline=1&portrait=0')" class="imgPlay" src="../assets/work/Michelin.png">
-                    </div>
-                    <h3>CLIENT // MICHELIN<br>ROLE // SOUND DESIGN AND MIX</h3>
-                </div>
+                
             </div>
 
             <div class="row">
@@ -67,11 +70,12 @@
                     <h3>CLIENT // MYSTERY BOX<br>ROLE // MUSIC</h3>
                 </div>
                 <div class="col-md-4">
-                    <div class="video">
-                        <img @click="openPlayer('https://www.youtube.com/embed/mHUOCxVT5ro?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/yellowstone.png">
+                    <div class="video">                        
+                        <img @click="openPlayer('https://player.vimeo.com/video/278197096?autoplay=1&color=1e222b&byline=1&portrait=0')" class="imgPlay" src="../assets/work/Michelin.png">
                     </div>
-                    <h3>CLIENT // MYSTERY BOX<br>ROLE // MUSIC</h3>
+                    <h3>CLIENT // MICHELIN<br>ROLE // SOUND DESIGN AND MIX</h3>
                 </div>
+                
             </div>
 
             <div class="row">
@@ -83,16 +87,17 @@
                 </div>
                 <div class="col-md-4">
                     <div class="video">
-                        <img @click="openPlayer('https://www.youtube.com/embed/ipJYTrBbaCc?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/Ballistix.png">
+                        <img @click="openPlayer('https://www.youtube.com/embed/mHUOCxVT5ro?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/yellowstone.png">
                     </div>
-                    <h3>CLIENT // BALLISTIX GAMING<br>ROLE // MUSIC, SOUND DESIGN AND MIX</h3>
+                    <h3>CLIENT // MYSTERY BOX<br>ROLE // MUSIC</h3>
                 </div>
                 <div class="col-md-4">
                     <div class="video">
-                        <img @click="openPlayer('https://www.youtube.com/embed/rwt8M_oQxsY?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/ABC.png">
+                        <img @click="openPlayer('https://www.youtube.com/embed/j1EaKLc-ld4?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/purple.png">
                     </div>
-                    <h3>CLIENT // ABC MOUSE<br>ROLE // MUSIC</h3>
+                    <h3>CLIENT // PURPLE<br>ROLE // MUSIC</h3>
                 </div>
+                
             </div>
 
             <div class="row">
@@ -135,6 +140,21 @@
                     </div>
                     <h3>CLIENT // JARED COOK<br>ROLE // MUSIC</h3>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="video">
+                        <img @click="openPlayer('https://www.youtube.com/embed/ipJYTrBbaCc?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/Ballistix.png">
+                    </div>
+                    <h3>CLIENT // BALLISTIX GAMING<br>ROLE // MUSIC, SOUND DESIGN AND MIX</h3>
+                </div>
+                <div class="col-md-4">
+                    <div class="video">
+                        <img @click="openPlayer('https://www.youtube.com/embed/rwt8M_oQxsY?autoplay=1&rel=0&amp;controls=1&amp;showinfo=0')" class="imgPlay" src="../assets/work/ABC.png">
+                    </div>
+                    <h3>CLIENT // ABC MOUSE<br>ROLE // MUSIC</h3>
+                </div>
+                
             </div>
             <div style="height: 70px"></div>
         </div>
@@ -209,6 +229,18 @@ iframe {
   overflow: hidden;
 }
 
+#iframeWrap {
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 .close {
   z-index: 101;
   position: absolute;

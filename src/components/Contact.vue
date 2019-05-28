@@ -32,26 +32,9 @@
 </template>
 
 <script>
-const firebase = require("firebase");
+import firebase from "@/firebase/init.js";
 const moment = require("moment");
 import swal from "sweetalert2";
-// Initialize Firebase
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyCHBYcG9zlIMR4rusCsGGVzG1QjUnEgBTQ",
-  authDomain: "bytheway-may.firebaseapp.com",
-  databaseURL: "https://bytheway-may.firebaseio.com",
-  projectId: "bytheway-may",
-  storageBucket: "bytheway-may.appspot.com",
-  messagingSenderId: "444625286662"
-};
-firebase.initializeApp(config);
-// reference messages collection
-const firestore = firebase.firestore();
-const settings = {
-  timestampsInSnapshots: true
-};
-firestore.settings(settings);
 const messagesRef = firebase.firestore().collection("messages");
 export default {
   name: "Contact",

@@ -5,6 +5,7 @@ import Work from "./views/Work.vue";
 import Music from "./views/Music.vue";
 import Tools from "./views/Tools.vue";
 import Gallery from "./views/Gallery.vue";
+import Contact from "./views/Contact.vue";
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       path: "/gallery",
       name: "gallery",
       component: Gallery
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: Contact
     }
   ],
   mode: "history",

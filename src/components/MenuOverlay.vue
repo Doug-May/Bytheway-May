@@ -9,9 +9,10 @@
         <div class="links">
           <h2 @click="menuRoute('/')">HOME</h2><br>
           <h2 @click="menuRoute('work')">WORK</h2><br>
-          <h2 @click="menuRoute('music')">MUSIC</h2><br>
+          <a href="https://www.youtube.com/channel/UC9cUY7AhvCW-tdTyKTdZwPg/playlists" target="_blank"><h2>MUSIC</h2></a><br>
           <h2 @click="menuRoute('tools')">TOOLS</h2><br>
-          <h2 @click="menuRoute('gallery')">GALLERY</h2>
+          <h2 @click="menuRoute('gallery')">GALLERY</h2><br>
+          <h2 @click="menuRoute('contact')">CONTACT</h2>
         </div>
     </div>  
 </div>
@@ -66,7 +67,6 @@ export default {
   background-color: #101319;
   width: 100%;
   height: 100vh;
-  padding-top: 20vh;
   z-index: 4;
 }
 
